@@ -1,0 +1,205 @@
+/*Imported font from google named 'Inter'*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #343A40;
+    min-height: 3000px;
+    padding-top: 80px;
+    padding-left: 170px;
+    padding-right: 40px;
+    transition: all 0.3s linear;
+}
+
+/*When the toggle is clicked the body will only have 5% padding so it will move to the left*/
+body.active {
+    padding-left: 5%;
+}
+
+.sidebar {
+    z-index: 201;
+    background-color:  #2A2F34;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    transition: all 0.3s linear;
+}
+
+.sidebar.active {
+    left: -150px;
+}
+
+.togglebutton {
+    position: absolute;
+    left: 110%;
+    top: 10px; 
+    cursor: pointer;
+}
+
+.togglebutton svg {
+   height: 20px;
+   width: 20px;
+}
+
+.header {
+    z-index: 200;
+    background-color: #343A40;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 150px;
+    right: 0;
+    height: 46px;
+    border: none;
+    border-bottom: 1.5px solid rgb(153, 153, 153);
+    transition: all .3s linear;
+}
+
+.biotheader {
+    position: absolute;
+    left: 130%;
+}
+
+.contentofbiotheader {
+    height: 46px;
+    display: flex;
+    align-items: center;
+}
+
+.biotheaderp {
+    width: 350px;
+}
+
+.userprofile {
+    height: 46px;
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.userprofilename {
+    background-color: #007BFF;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.userprofilename svg {
+    height: 20px;
+    width: 20px;
+}
+
+.userprofilename .bi-caret-down-fill {
+    height: 8px;
+    width: 8px;
+    flex: 1;
+}
+
+.userprofilename p {
+    font-size: 12px;
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.adminbg {
+    height: 46px;
+    background-color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adminbg p {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.links {
+    position: absolute;
+    margin-top: 20px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.links li {
+    /*padding: 10px 10px 10px 35px;*/
+    position: relative;
+    width: 100%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.links li svg {
+    width: 50px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    flex: 1;
+    transition: 0.5s;
+}
+
+.links .bgblue {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+.maincontentgrid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 110px 110px 110px 110px ;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+@media (max-width: 680px) {
+    .maincontentgrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.widget {
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: inline-block;
+    height: 55px;
+    width: 110px;
+}
+
+.widget .widgetdiv {
+    display: flex;
+    flex-direction: row;
+    height: 55px;
+    align-items: center;
+   
+}
+
+.widget .widgetdiv svg {
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.widget .widgetdiv p {
+    font-size: 15px;
+    flex: 1;
+}
